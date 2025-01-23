@@ -1,15 +1,14 @@
 // Pin Definitions
-#define LEFT_SENSOR A0
-#define RIGHT_SENSOR A2
+#define LEFT_SENSOR 3
+#define RIGHT_SENSOR 2
 
-#define LEFT_MOTOR_IN1 3
-#define LEFT_MOTOR_IN2 A1
-#define RIGHT_MOTOR_IN3 5
-#define RIGHT_MOTOR_IN4 6
-#define ENA 12
-#define ENB 4
+#define LEFT_MOTOR_IN1 13
+#define LEFT_MOTOR_IN2 12
+#define RIGHT_MOTOR_IN3 11
+#define RIGHT_MOTOR_IN4 10
 
-#define MOTOR_SPEED 150
+
+#define MOTOR_SPEED 250
 
 void setup() {
   pinMode(LEFT_SENSOR, INPUT);
@@ -20,13 +19,7 @@ void setup() {
   pinMode(RIGHT_MOTOR_IN3, OUTPUT);
   pinMode(RIGHT_MOTOR_IN4, OUTPUT);
 
-  pinMode(ENA, OUTPUT);
-  pinMode(ENB, OUTPUT);
-
-  analogWrite(ENA, MOTOR_SPEED);
-  analogWrite(ENB, MOTOR_SPEED);
 }
-
 void loop() {
   // Read sensor values
   bool leftDetected = digitalRead(LEFT_SENSOR);
